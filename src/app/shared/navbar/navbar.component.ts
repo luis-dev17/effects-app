@@ -4,22 +4,23 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styles: [
-  ]
+  styles: []
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor( private router: Router ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
-  irUsuario(id: string){
-    if(!id){
+  irUsuario( id: string ) {
+
+    if ( !id ) {
       return;
-    }else{
-      this.router.navigate(['/usuario',id])
     }
+
+    this.router.navigate([ '/usuario', id ]);
+
   }
 
 }
